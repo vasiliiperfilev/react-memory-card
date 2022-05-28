@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { PropTypes } from 'prop-types';
 import Card from './Card';
+import '../styles/board.css';
 
 function Board(props) {
   const { pokemons, onCardClick } = props;

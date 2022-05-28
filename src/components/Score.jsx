@@ -1,8 +1,9 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import '../styles/score.css';
 
 function Score(props) {
-  const { currentScore, bestScore } = props;
+  const { currentScore, maxScore } = props;
   return (
     <div className="score">
       <div className="score current">
@@ -11,7 +12,7 @@ function Score(props) {
       </div>
       <div className="score best">
         <p>Best:</p>
-        <p>{bestScore}</p>
+        <p>{maxScore}</p>
       </div>
     </div>
   );
@@ -19,7 +20,7 @@ function Score(props) {
 
 Score.propTypes = {
   currentScore: PropTypes.number.isRequired,
-  bestScore: PropTypes.number.isRequired,
+  maxScore: PropTypes.number.isRequired,
 };
 
 export default Score;

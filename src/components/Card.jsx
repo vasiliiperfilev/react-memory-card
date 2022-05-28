@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import '../styles/card.css';
 
 function Card(props) {
   const { id, name, imgSrc, onCardClick } = props;
@@ -10,7 +11,7 @@ function Card(props) {
   return (
     <div className="card" onClick={onClick} role="button" tabIndex={0} id={id}>
       <img src={imgSrc} alt="Pokemon" />
-      <h3>{name}</h3>
+      <h3>{name.charAt(0).toUpperCase() + name.slice(1)}</h3>
     </div>
   );
 }

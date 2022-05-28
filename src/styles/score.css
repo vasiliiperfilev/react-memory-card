@@ -1,0 +1,21 @@
+.score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  font-size: 1.2rem;
+  margin-left: auto;
+}
+
+.score.current {
+  border-right: 2px solid whitesmoke;
+  padding-right: 10px;
+}
+
+.current {
+  color: rgb(0, 196, 0);
+}
+
+.best {
+  color:rgb(219, 58, 58);
+}

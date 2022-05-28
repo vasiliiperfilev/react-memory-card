@@ -4,6 +4,7 @@ import Board from './components/Board';
 import Header from './components/Header';
 import Loading from './components/Loading';
 import getData from './data/getData';
+import './styles/app.css';
 
 const initialState = {
   level: 1,
@@ -118,7 +119,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header scores={{ currentScore: 5, bestScore: 10 }} />
+      <Header scores={gameState.scores} />
       <Board pokemons={gameState.pokemons} onCardClick={onCardClick} />
     </div>
   );

@@ -1,0 +1,17 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightslategray;
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+  border: 2px solid rgb(90, 103, 116);
+  color: rgb(27, 31, 34);
+}
+
+.card>img{
+  height: 128px;
+  width: auto;
+}

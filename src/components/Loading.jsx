@@ -5,7 +5,7 @@ import '../styles/loading.css';
 function Loading() {
   return (
     <div className="wrapper">
-      <img src={loadingIcon} alt="Loading icon" />
+      <img className="rotating" src={loadingIcon} alt="Loading icon" />
     </div>
   );
 }
