@@ -89,6 +89,7 @@ function App() {
       setGameState((prevGameState) => ({
         ...initialState,
         level: prevGameState.level + 1,
+        scores: prevGameState.scores,
       }));
     }
   }, [gameState.isLevelDone]);
