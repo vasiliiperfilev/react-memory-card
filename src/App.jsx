@@ -83,17 +83,6 @@ function App() {
     }
   }, [gameState.isGameOver]);
 
-  // advance level if current is done
-  useEffect(() => {
-    if (gameState.isLevelDone) {
-      setGameState((prevGameState) => ({
-        ...initialState,
-        level: prevGameState.level + 1,
-        scores: prevGameState.scores,
-      }));
-    }
-  }, [gameState.isLevelDone]);
-
   // updates score if new pokemon was clicked
   useEffect(() => {
     if (gameState.lastClickedId !== null) {
@@ -113,6 +102,17 @@ function App() {
       });
     }
   }, [gameState.lastClickedId]);
+
+  // advance level if current is done
+  useEffect(() => {
+    if (gameState.isLevelDone) {
+      setGameState((prevGameState) => ({
+        ...initialState,
+        level: prevGameState.level + 1,
+        scores: prevGameState.scores,
+      }));
+    }
+  }, [gameState.isLevelDone]);
 
   if (gameState.isLoading) {
     return <Loading />;
